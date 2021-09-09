@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> final </title>
+	<style>
+	.int{
+			position: absolute;
+			top:10px;
+			left:10px;
+			width: 1340px;
+			height: 650px;
+			background: black;
+			color: white;
+			font-size:350%;
+			font-family: arial;
+		}
+	    .sr{
+			position: absolute;
+		    font-family: car;
+		    top: 100px;
+		    left: 30px;
+		    width: 250px;
+		    height: 100px;
+		    border: white 3px solid;
+		    background: blueviolet;
+		    color: black;
+			font-size:250%;
+			font-family: arial;
+
+		}
+	.md{
+			position: absolute;
+		    font-family: car;
+		    top: 250px;
+		    left: 30px;
+		    width: 250px;
+		    height: 100px;
+		    border: white 3px solid;
+		    background: blueviolet;
+		    color: black;
+			font-size:200%;
+			font-family: arial;
+		}
+		.teo{
+			position: absolute;
+		    top: 400px;
+		    left: 30px;
+		    width: 250px;
+		    height: 100px;
+		    border: white 3px solid;
+		    background: blueviolet;
+		    color: black;
+			font-size:250%;
+			font-family: arial;
+		}
+	.info{
+		position: absolute;
+		font-family: arial;
+		font-size: 300%;
+		top: 5%;
+		left: 30%;
+		width: 64%;
+		height: 0%;
+		background: violet;
+		transition: 2s all;
+	}
+
+	.info1{
+		position: absolute;
+		font-family: arial;
+		font-size: 300%;
+		top: 5%;
+		left: 30%;
+		width: 64%;
+		height: 0%;
+		background: burlywood;
+		transition: 2s all;
+	}
+
+	.cer{
+		position: absolute;
+		font-family: arial;
+		top: 84%;
+		left: 84%;
+		width: 10%;
+		height: 0%;
+
+		background: darkviolet;
+		transition: all 1s 1s;
+		transition:  2s all;
+	}
+
+		@font-face{
+	font-family: car;
+	src: url(vee.otf);
+}
+	</style>
+	
+</head>
+<body>
+	<div class="int"><center>...Interfaz usuario...</center></div>
+	<div class="sr" onclick="boton()">Suma o resta</div>
+	<div class="md" onclick="botonn()">Multiplicación o<br> división</div>
+	<div class="teo" onclick="botonnn()">Teoría</div>
+	<div class="info" id="a"></div>
+	<div class="info1" id="aa"></div>
+	<div class="cer" id="aaa" onclick="cerr()"> </div>
+	
+
+
+
+	<script>
+		function boton() {
+			a.style.height=90+"%";
+			aa.style.height=0+"%";
+			a.innerHTML="Para suma:<br> En este caso agregaremos un valor a otro, es decir, vamos a seguir contando hasta llegara a la catidad de quieres <br> Para restar:<br> En este caso lo que haremos es quitar al primer valor el segundo valor";
+			aa.innerHTML=" ";
+			aaa.style.height=10+"%";
+			aaa.innerHTML="cerrar";
+		}
+		function botonn() {
+			aa.style.height=90+"%";
+			a.style.height=0+"%";
+			aa.innerHTML="Para multiplicar:<br> lo que haremos es inclmentar el valor la catindad de veces que se nos pida<br>Para divir:<br> Esto es como una reparticion en la cual al primer valor lo rapertiremos en formas iguales segun el segun valor";
+			a.innerHTML=" ";
+			aaa.style.height=10+"%";
+			aaa.innerHTML="cerrar";
+		}
+		function botonnn() {
+			a.style.height=80+"%";
+			aa.style.height=0+"%";
+			a.innerHTML=" Bienvenido...<br>En este aplicativo, te enseñaremos a sumar, restar y multiplicar y dividir, con practica podras lograr lo que esta maquina puede hacer con magia y un poquito de buen animo, aprende jugando y educate pero sobre todo no dejes de ser un niño.";
+			aa.innerHTML=" ";
+			aaa.style.height=10+"%";
+			aaa.innerHTML="cerrar";
+		}
+		function cerr(){
+			aa.style.height=0+"%";
+			a.innerHTML=" ";
+			a.style.height=0+"%";
+			aa.innerHTML=" ";
+			aaa.style.height=0+"%";
+			aaa.innerHTML=" ";
+		}
+	
+	</script>
+
+</body>
+</html>
