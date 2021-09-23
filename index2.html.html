@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Neosistemas</title>
+</head>
+<style type="text/css">
+    body{
+    	background: #DAFBFF;
+    }
+	.ti{
+		position: absolute;
+		width: 50%;
+		height: 15%;
+		left: 25%;
+		top: 5%;
+		color: black;
+		background: #DAFBFF;
+		font-size: 300%;
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: solid 2px black;
+	}
+	.logo{
+		position: absolute;
+		width: 0%;
+		left: 42%;
+		height: 0%;
+		top: 40%;
+
+	}
+	.e1{
+		position: absolute;
+		width: 25%;
+		height: 20%;
+		left: 10%;
+		top: 30%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: solid 2px black;
+		font-size: 250%;
+		opacity: 0;
+	}
+	.e2{
+		position: absolute;
+		width: 25%;
+		height: 20%;
+		left: 10%;
+		top: 70%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: solid 2px black;
+		font-size: 250%;
+		opacity: 0;
+	}
+	.gr{
+		position: absolute;
+		left: 40%;
+		width: 50%;
+		top: 30%;
+		height: 60%;
+		border: solid 2px black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		text-align: center;
+		z-index: 1;
+	}
+	.img1{
+		position: absolute;
+		top: 48%;
+		left: 52%;
+		height: 25%;
+		width: 25%;
+		opacity: 0;
+		zIndex: 0;
+	}
+	.img2{
+		position: absolute;
+		top: 48%;
+		left: 52%;
+		height: 25%;
+		width: 25%;
+		opacity: 0;
+		z-index: 0;
+	}
+
+</style>
+<body>
+<div class="ti" onclick="logo()">NEOSISTEMAS</div>
+<img src="escudo.png" class="logo" id="lo">
+<div class="e1" onclick="den()" id="eje1">Eje 1</div>
+<div class="e2" onclick="lib()" id="eje2">Eje 2</div>
+<div class="gr" id="pri" onmousemove="esd(event)"></div>
+<img src="espi1.jpg" class="img1" id="i1">
+<img src="espi2.jpg" class="img2" id="i2">
+<script type="text/javascript">
+	function logo() {
+		lo.style.width=15+"%";
+		lo.style.height=23+"%";
+		setTimeout(des, 1000);
+	}
+	function des() {
+		lo.style.width=0+"%";
+		lo.style.height=0+"%";
+		eje1.style.opacity=1;		
+		eje2.style.opacity=1;
+	}
+	function den() {
+		i1.style.opacity=0;
+		i2.style.opacity=0;
+		pri.style.opacity=1;
+		i1.style.zIndex=0;
+		i2.style.zIndex=0;
+		pri.style.zIndex=1;
+	}
+	function esd(event) {
+		x=event.clientX;
+		y=event.clientY;
+	if(x>613&&x<1386&&y>215&&y<654)
+	{
+		pri.innerHTML="X: "+x+" Y: "+y+"<br>"+"Estoy dentro";
+	}
+	}
+	function lib() {
+		i1.style.zIndex=1;
+		pri.style.zIndex=0;
+		i1.style.opacity=1;
+		setTimeout(lib2, 1000);
+	}
+	function lib2() {
+		i1.style.zIndex=0;
+		i2.style.zIndex=1;
+		i2.style.opacity=1;
+	}
+</script>
+</body>
+</html>
